@@ -1,70 +1,81 @@
 # CarRental
 
-A modern car rental web application built with React and Vite.
+A modern car rental web application that allows users to browse, book, and manage car rentals, as well as provides an owner dashboard for car management.
 
 ## Features
-- Browse available cars with images and details
-- View car details and specifications
-- Book cars online
-- User authentication (login/signup)
-- Responsive design for mobile and desktop
-- Dashboard for managing bookings
-- Newsletter subscription
-- Testimonials and reviews
+
+- **User Functionality**
+  - Browse available cars
+  - View detailed car information
+  - Book cars and manage bookings
+  - Responsive navigation and footer
+
+- **Owner Functionality**
+  - Owner dashboard for managing cars
+  - Add new cars to the platform
+  - Separate owner layout for management pages
 
 ## Project Structure
+
 ```
 frontend/
-  ├── public/
   ├── src/
-  │   ├── assets/         # Images and SVGs
-  │   ├── compponents/    # Reusable React components
-  │   ├── pages/          # Application pages (Home, Cars, CarDetail, MyBooking)
-  │   ├── App.jsx         # Main App component
-  │   ├── main.jsx        # Entry point
-  │   └── index.css       # Global styles
-  ├── index.html
-  ├── package.json
-  ├── vite.config.js
-  └── README.md
+  │   ├── App.jsx
+  │   ├── compponents/
+  │   │   ├── Navbar.jsx
+  │   │   └── Footer.jsx
+  │   ├── pages/
+  │   │   ├── Home.jsx
+  │   │   ├── Cars.jsx
+  │   │   ├── CarDetail.jsx
+  │   │   ├── MyBooking.jsx
+  │   │   └── owner/
+  │   │       ├── Layout.jsx
+  │   │       ├── Dashboard.jsx
+  │   │       └── AddCar.jsx
+  └── ...
 ```
+
+## How It Works
+
+- **Routing:**  
+  Uses React Router for navigation between pages.  
+  - `/` — Home page  
+  - `/cars` — List of cars  
+  - `/car-details/:id` — Car details  
+  - `/my-bookings` — User bookings  
+  - `/owner` — Owner dashboard  
+  - `/owner/add-car` — Add car page
+
+- **Conditional Layout:**  
+  Navbar and Footer are hidden on owner dashboard routes for a focused management experience.
+
+- **State Management:**  
+  Uses React hooks for UI state (e.g., login modal).
 
 ## Getting Started
 
-### Prerequisites
-- Node.js (v16 or above recommended)
-- npm
-
-### Installation
-1. Clone the repository:
-   ```
-   git clone https://github.com/Vishal-Kushwaha1/CarRental.git
-   ```
-2. Navigate to the frontend directory:
-   ```
-   cd CarRental/frontend
-   ```
-3. Install dependencies:
+1. **Install dependencies:**
    ```
    npm install
    ```
-4. Start the development server:
+
+2. **Run the development server:**
    ```
-   npm run dev
+   npm start
    ```
 
-## Scripts
-- `npm run dev` — Start development server
-- `npm run build` — Build for production
-- `npm run preview` — Preview production build
-
-## Folder Details
-- **assets/**: Images, icons, and SVGs used in the app
-- **compponents/**: Banner, CarCard, FeaturedSection, Footer, Hero, Navbar, Newsletter, Testimonial, Title
-- **pages/**: Home, Cars, CarDetail, MyBooking
+3. **Open in browser:**  
+   Visit [http://localhost:3000](http://localhost:3000)
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Feel free to fork the repository, open issues, or submit pull requests for improvements and bug fixes.
 
 ## License
+
 This project is licensed under the MIT License.
+
+---
+
+**Made with ❤️ by Vishal Kushwaha**
